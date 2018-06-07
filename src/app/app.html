@@ -1,0 +1,17 @@
+<ion-menu [content]="mycontent">
+    <ion-header>
+        <ion-toolbar color="danger">
+            <ion-title>menu</ion-title>
+        </ion-toolbar>
+        
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button menuClose="" ion-item="" *ngFor="let m of menus" (click)="onPage(m)">
+            {{m.title}}
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+<ion-nav  #mycontent [root]="rootPage"></ion-nav>
